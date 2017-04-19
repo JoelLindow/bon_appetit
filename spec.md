@@ -47,21 +47,21 @@ pantry = Pantry.new
 # Building our recipe
 r = Recipe.new("Cheese Pizza")
 # => <Recipe...>
+#
+# r.ingredients
+# # => {}
 
-r.ingredients
-# => {}
+# r.add_ingredient("Cheese", 20)
+# r.add_ingredient("Flour", 20)
+#
+# r.ingredients
+# # => {"Cheese" => 20, "Flour" => 20}
 
-r.add_ingredient("Cheese", 20)
-r.add_ingredient("Flour", 20)
-
-r.ingredients
-# => {"Cheese" => 20, "Flour" => 20}
-
-# Adding the recipe to the shopping list
-pantry.add_to_shopping_list(r)
-
-# Checking the shopping list
-pantry.shopping_list # => {"Cheese" => 20, "Flour" => 20}
+# # Adding the recipe to the shopping list
+# pantry.add_to_shopping_list(r)
+#
+# # Checking the shopping list
+# pantry.shopping_list # => {"Cheese" => 20, "Flour" => 20}
 
 # Adding another recipe
 r = Recipe.new("Spaghetti")
